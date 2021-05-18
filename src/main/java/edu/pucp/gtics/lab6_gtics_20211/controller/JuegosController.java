@@ -104,6 +104,7 @@ public class JuegosController {
             model.addAttribute("listaPlataformas", listaPlataformas);
             model.addAttribute("listaDistribuidoras", listaDistribuidoras);
             model.addAttribute("listaGeneros", listaGeneros);
+            System.out.println("tengo errrrroooooooooooooooooooooooooooooooooooooooooooooooor");
             return "juegos/editarFrm";
         } else {
             if (juego.getIdjuego() == 0) {
