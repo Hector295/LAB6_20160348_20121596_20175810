@@ -14,11 +14,11 @@
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 card-app">
                 <div class="col mb-4" th:each="juego, info : ${listajuegos}">
                     <div class="card" >
-                        <img class="card-img-top" th:src="${juego.imageURL}" alt="Card image cap">
+                        <img class="card-img-top" th:src="${juego.image}" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title" >
                                 <span th:text="${juego.nombre}"></span>
-                                <!-- ....... -->
+                                <span style="background-color: #dc9624" th:text="${juego.genero.nombre}"></span>
                             </h5>
                             <p class="card-text" th:text="${juego.descripcion}"></p>
                         </div>
@@ -31,7 +31,7 @@
         <footer class="py-4 bg-light mt-auto">
             <div class="container-fluid">
                 <div class="d-flex align-items-center justify-content-between small">
-                    <div class="text-muted">Colocar # Grupo - PUCP @ 2021</div>
+                    <div class="text-muted">Colocar 3 Grupo - PUCP @ 2021</div>
                 </div>
             </div>
         </footer>

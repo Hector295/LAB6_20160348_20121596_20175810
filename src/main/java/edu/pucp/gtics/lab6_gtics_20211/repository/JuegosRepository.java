@@ -10,6 +10,8 @@ import java.util.List;
 @Repository
 
 public interface JuegosRepository extends JpaRepository<Juegos,Integer> {
-    @Query(value = "Select ... Where u.idusuario= ?",nativeQuery = true)
+    @Query(value = "Select j.idjuego, j.nombre, j.descripcion, j.image, j.idgenero \n" +
+            "from juegos j, juegosxusuario ju \n" +
+            "where j.idjuego=ju.idjuego and ju.idusuario= ?",nativeQuery = true)
     List<JuegosUserDto> obtenerJuegosPorUser(int idusuario);
 }
