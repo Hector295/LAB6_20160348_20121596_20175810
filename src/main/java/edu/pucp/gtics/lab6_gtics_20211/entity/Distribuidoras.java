@@ -21,7 +21,7 @@ public class Distribuidoras {
     @Size(min=3, max = 198, message = "Debe contener entre 3 y 198 caracteres")
     private String descripcion;
 
-    @Min(value = 1880, message = "Debe ser mayor que o igual a 1880")
+    @Min(value = 1080, message = "Debe ser mayor que o igual a 1880")
     @Max(value = 2100, message = "Debe ser menor que 2100")
     private int fundacion = 1800;
 
